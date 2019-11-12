@@ -49,3 +49,42 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.Question_Center{
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid black;
+  border-radius: 20px;
+  color: white;
+  width: 100%;
+  height: 80%;
+}
+
+.masthead_V1 {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('https://www.ara.nl/sites/bd_ara_nl/files/styles/imgstyle_16_7/public/usercontent/glr_site_bg.jpg?itok=In4y3vu1');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1{
+    color: #00ff08;
+    font-weight: bold;
+}
+
+h4{
+    color: #007504;
+}
+
+.SPACE{
+  padding-top: 2%;
+}
+
+.Long_Input{
+  width: 100%;
+}
