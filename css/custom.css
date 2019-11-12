@@ -77,7 +77,17 @@ h1{
     font-weight: bold;
 }
 
+h2{
+  color: #00ff08;
+  font-weight: bold;
+}
+
 h4{
+    color: #007504;
+    font-weight: bold;
+}
+
+h5{
     color: #007504;
 }
 
@@ -87,4 +97,42 @@ h4{
 
 .Long_Input{
   width: 100%;
+}
+
+.CENTER{
+  text-align: center;
+}
+
+.CENTER_Table{
+
+}
+
+table {
+  width: 100%;  
+}
+
+td{
+  width: 33.33%;
+  text-align: center;
+}
+
+td.column2{
+  width: 50%;
+  text-align: center;
+}
+
+th{
+  width: 33.33%;
+  text-align: center;
+}
+
+th.full{
+  width: 100%;
+  text-align: center;
+}
+
+.Bottems_up{ 
+  border-bottom: solid;
+  border-width: 3px 0;
+  color: #2c6b2e;
 }
