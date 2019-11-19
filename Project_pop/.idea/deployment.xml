@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="PoPquiz_test" showDialogOnRemoteDnD="false">
+    <serverData>
+      <paths name="PoPquiz">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/httpdocs" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="PoPquiz_test">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/httpdocs/Project_pop" local="$PROJECT_DIR$" web="/Project_pop" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="private">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/httpdocs" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
