@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://media.licdn.com/dms/image/C4D1BAQEyXi6vZWj_1A/company-background_10000/0?e=2159024400&v=beta&t=Pjof12Cgu-OQ-vP7LoG8Jj_59-wwoyBQeabBm5xMJeY');
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /*background-color: red;*/
+    margin: 0;
+}
+
+header>figure {
+    width: 150px;
+    margin: 0;
+    padding: 10px;
+}
+
+header>figure>img {
+    width: 100%;
+}
+
+table >tbody> tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+table >tbody> tr:nth-child(odd){
+    background-color: #888888;
+}
+
+table>thead>tr>th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin: 50px auto 0;
+    font-size: 1.25em;
+}
+
+table>tbody>tr>td, table>thead>tr>th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}

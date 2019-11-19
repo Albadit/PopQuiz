@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="932120cd-2e5f-4722-82e4-8067ac3d02d4" name="private" url="http://83502.ict-lab.nl">
+        <fileTransfer host="web02.ict-lab.nl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="6bb30b67-4aae-490a-8195-97047b3310d9" name="PoPquiz" url="http://popquiz.ict-lab.nl">
+        <fileTransfer host="web01.ict-lab.nl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="2636bf9a-7b3e-47e0-9784-fde941442ecc" name="PoPquiz_test" url="http://popquiz-test.ict-lab.nl">
+        <fileTransfer host="web01.ict-lab.nl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
