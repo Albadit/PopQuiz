@@ -1,5 +1,0 @@
-DB hints:
-
-bij tabel team is teamRed wordt een array van alle spelers van team rrod
-
-speler tabel: alle spelers hebben een kleur en alleen de laatste 4 spelers (sort op id) worden in een team gezet

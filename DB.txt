@@ -1,9 +1,0 @@
-pma.ict-lab.nl
-
-user: popquiz
-
-pass: I9g5t5e*3hO5om^9
-
-user: popquiz_test
-
-pass: qDw62a&268jBi3c$
