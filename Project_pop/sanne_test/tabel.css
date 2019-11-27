@@ -1,0 +1,93 @@
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  background: url('../IMG/music.jpg') no-repeat center center fixed;
+}
+
+h2 {
+  color: white;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #D1282F;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  background-color: white;
+}
+
+#contain {
+  display: flex;
+  justify-content: center;
+  padding: 33px 30px;
+}
+
+table td, table th {
+  padding: 8px;
+}
+
+table tr:hover {
+  background-color: darkgrey;
+}
+
+table thead th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+table thead th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+table tbody tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+}
+
+.achter:hover {
+  background-color: rgb(199, 201, 200);
+}
+
+#knop {
+  margin-top: 2%;
+  float: right;
+  background-color: #3854FD;
+  color: white;
+  font-size: 23px;
+  padding: 4px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: #3854FD;
+  text-align: center;
+}
+
+#button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  float: right;
+  background-color: #3854FD;
+  color: white;
+  font-size: 40px;
+  padding: 4px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: #3854FD;
+  text-align: center;
+}
+
+#verberg {
+  visibility: hidden;
+}
+
+input[type=number] {
+  border-color: #de2a3d;
+}

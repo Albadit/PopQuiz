@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main>div>figure>img {
+    border-radius: 20px;
+    display: block;
+    margin: 15px auto;
+}
+
+body {
+    background-image: url('https://media.licdn.com/dms/image/C4D1BAQEyXi6vZWj_1A/company-background_10000/0?e=2159024400&v=beta&t=Pjof12Cgu-OQ-vP7LoG8Jj_59-wwoyBQeabBm5xMJeY');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+  height: 100vh;
+  min-height: 500px;
+}
+
+main>div{
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid black;
+    border-radius: 20px;
+    color: white;
+    width: 60%;
+    height: 60%;
+    margin: 100px auto 0;
+}
+
+h1, h2{
+    color: #00ff08;
+    font-weight: bold;
+}
+
+h4{
+    color: #007504;
+    font-weight: bold;
+}
+
+h5{
+    color: #007504;
+}
+
+form>label>input{
+    width: 80%;
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    border: 2px solid green;
+    padding: 7px;
+    font-size: 1.2em;
+    font-family: 'Oxygen', sans-serif;
+}
+
+form>input[type=submit] {
+    display: block;
+    margin: 45px auto 10px;
+    width: 30%;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #006700;
+    background-color: #3ef33e;
+    font-size: 1.2em;
+    font-family: 'Oxygen', sans-serif;
+}

@@ -933,100 +933,6 @@ img.spacer {
   top: 13px
 }
 
-.Button--secondary.Icon--marker--museum:after {
-  background-color: #00bdf3
-}
-
-.Button--secondary.Icon--marker--gallery:after {
-  background-color: #ed1414
-}
-
-.Button--secondary.Icon--marker--bar:after {
-  background-color: #f1e910
-}
-
-.Button--secondary.Icon--marker--creative:after {
-  background-color: #eb32e9
-}
-
-.Button--secondary.Icon--marker--glr:after {
-  background-color: #abcd00
-}
-
-.Button--share {
-  position: relative
-}
-
-.Button--share:before {
-  position: absolute;
-  left: 30px;
-  top: 50%
-}
-
-.Button--share--facebook {
-  background-color: #3a5899
-}
-
-.Button--share--facebook:before {
-  font-size: 18px;
-  margin-top: -9px
-}
-
-.Button--share--twitter {
-  background-color: #2ba9e1
-}
-
-.Button--share--twitter:before {
-  font-size: 14px;
-  margin-top: -7px
-}
-
-.Button--share--mail {
-  background-color: #778f98
-}
-
-.Button--share--mail:before {
-  font-size: 12px;
-  margin-top: -6px
-}
-
-.Button--share--pinterest {
-  background-color: #eb1213
-}
-
-.Button--share--pinterest:before {
-  font-size: 18px;
-  margin-top: -9px
-}
-
-.Button--spot {
-  margin-bottom: 16px;
-  margin-bottom: 1rem
-}
-
-.SocialLinks {
-  overflow: hidden
-}
-
-.SocialLinks .Button,
-.SocialLinks .pager li.pager-current,
-.pager .SocialLinks li.pager-current,
-.SocialLinks .pager li a,
-.pager li .SocialLinks a {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  width: 46px;
-  height: 46px;
-  line-height: 46px;
-  text-align: center;
-  background-color: #c5cdd3;
-  vertical-align: top;
-  margin-right: 6px;
-  margin-bottom: 10px
-}
-
 @media (max-width:900px) {
 
   .Button,
@@ -3943,13 +3849,14 @@ h6 {
 
 p {
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 36px;
   line-height: 2.25rem;
   margin-top: 36px;
   margin-top: 2.25rem;
   margin-bottom: 36px;
-  margin-bottom: 2.25rem
+  margin-bottom: 2.25rem;
+  font-family: "nimbus-sans", sans-serif;
 }
 
 .TextPlus+p {

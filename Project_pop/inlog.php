@@ -23,6 +23,21 @@ if(isset($_POST['submit'])) {
 
     $username = $_POST['username'];
     $password = sha1($_POST['password']);
+
+//    function like_match($pattern)
+//    {
+        $items = array(";", "#", "'", '"', "''", '""');
+//        $pattern = str_replace($items, '', preg_quote($pattern, '/'));
+//        return (bool) preg_match("/^{$pattern}$/i", $subject);
+        //return (bool) ;
+    //}
+
+    $pattern1 = str_replace($items, '', preg_quote($username, '/'));
+    $pattern2 = str_replace($items, '', preg_quote($password, '/'));
+    echo $pattern1;
+    var_dump($pattern2);
+
+
     if (strlen($username) > 0 && strlen($password) > 0) {
         ## query aanpassen
         $query = "SELECT * FROM `back2_users` WHERE `username` = '$username' AND `password` = '$password'";
@@ -30,6 +45,7 @@ if(isset($_POST['submit'])) {
         if (mysqli_num_rows($result) == 1) {
             session_start();
             $_SESSION['username'] = $username;
+            echo "gelukt";
             header("Location: index.php");
         }
     } else {

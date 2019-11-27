@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 session_start();
 
 if(isset($_POST['join'])) {
-    include_once 'config_test.php';
+    include_once '../config_test.php';
     $lastQuery = "SELECT `gameID` FROM `Game` WHERE 1 ORDER BY `gameID` DESC LIMIT 1";
     $resultQuery = mysqli_query($mysqli, $lastQuery);
     $resultaatQuery = mysqli_fetch_array($resultQuery);

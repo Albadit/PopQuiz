@@ -35,41 +35,6 @@
                     <div class="TextPlus TextIntro">
                         <div class="grid">
                             <form method="POST" class="form login">
-                            <?php
-                            error_reporting(E_ALL);
-                            error_reporting(-1);
-                            ini_set('error_reporting', E_ALL);
-
-                            require_once 'config.php';
-
-                            if(isset($_POST['inlog'])) {
-                                                            
-                            $username = $_POST['username'];
-                            $password = sha1($_POST['password']);
-                        
-                            $items = array(";", "#", "'", '"', "''", '""', "-", "--");
-                        
-                            $pattern1 = str_replace($items, '|', preg_quote($username, '/'));
-                            $pattern2 = str_replace($items, '|', preg_quote($password, '/'));
-
-                                if (strlen($username) > 0 && strlen($password) > 0) {
-                                    $query = "SELECT * FROM `User` WHERE `username` = '$pattern1' AND `password` = '$pattern2'";
-                                    $result = mysqli_query($mysqli, $query);
-                                    
-                                    if (mysqli_num_rows($result) == 1) {
-                                        session_start();
-                                        $row = mysqli_fetch_array($result);
-                                        $level = $row['level'];
-                                        $_SESSION['username'] = $username;
-                                        $_SESSION['level'] = $level;
-                                        header("Location:host.php");
-                                    }
-                                    else {
-                                        echo "Je gegevens kloppen niet";
-                                    }
-                                } 
-                            }
-                            ?>
                                 <div class="form__field">
                                     <label for="login__username">
                                         <svg class="icon">
@@ -88,15 +53,42 @@
                                         </svg>
                                         <span class="hidden">Password</span>
                                     </label>
-                                    <input id="login__password" type="password" name="password" class="form__input" placeholder="Wachtwoord" required>
+                                    <input id="login__password" type="password" name="password" class="form__input"
+                                        placeholder="Wachtwoord" required>
                                 </div>
 
                                 <div class="form__field">
                                     <input type="submit" name="inlog" value="log in">
                                 </div>
-                                <a href="join_room.php">Klik hier voor Join Room</a>
-                                <br>
-                                
+                                <?php
+                                ini_set('display_errors', 1);
+                                ini_set('display_startup_errors', 1);
+                                error_reporting(E_ALL);
+                                require_once 'config_test.php';
+                                session_start();
+
+                                if(isset($_POST['inlog'])) {
+                                    $username = $_POST['username'];
+                                    $password = sha1($_POST['password']);
+                                                                      
+                                    $query = "SELECT * FROM `User` WHERE `username` = '$username' AND `password` = '$password'";
+                                    $result = mysqli_query($mysqli, $query);
+                                    $user = mysqli_fetch_array($result);
+                                    
+                                    if (mysqli_num_rows($result) == 1) {
+                                        $loginID = $user['ID'];
+                                        $_SESSION['ID'] = $loginID;
+                                        $_SESSION['username'] = $username;
+                                        header("Location:host.php");
+                                        exit();
+                                    }
+                            
+                                    else {
+                                        echo "je gegevens kloppen niet";
+                                        exit();
+                                    }
+                                }
+                                ?>
                             </form>
                         </div>
 

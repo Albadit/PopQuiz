@@ -12,7 +12,10 @@ if(isset($_POST['join_game'])) {
 //    $teamname = $_POST['teamname'];
 //    echo $teamname;
     $team = $_POST['team'];
-
+    $_SESSION['team'] = $team;
+    $items = array(";", "#", "'", '"', "''", '""');
+    $pattern1 = str_replace($items, '', preg_quote($team, '/'));
+    $pattern2 = str_replace($items, '', preg_quote($naam, '/'));
 // nog zorgen voor team naam invoerveld
     $keuzeSpeler = "SELECT * FROM `Speler` WHERE `team` = '$team' AND `sessieCode` = '$sessieCode'";
     $result = mysqli_query($mysqli, $keuzeSpeler);
@@ -40,7 +43,7 @@ if(isset($_POST['join_game'])) {
         }
         $result2 = mysqli_query($mysqli, $query);
         if ($result2) {
-            header("Location: user_wachtscherm.html");
+            header("Location: user_wachtscherm.php");
         }
     }
     //$insertPlayers = "UPDATE `Speler` SET `teamNaam`=[value-2],`captain`=[value-3],`speler1`=[value-4],`speler2`=[value-5],`speler3`=[value-6] WHERE `team` = '$team'";
@@ -70,7 +73,7 @@ if(isset($_POST['join_game'])) {
           </label>
         <input id="login__username" type="text" name="name" class="form__input" placeholder="Naam" required>
       </div>
-<!--        --><?php
+        <?php
 //        $teamnameCheck = "SELECT * FROM `Speler` WHERE `sessieCode` = '$sessieCode' AND `teamNaam` IS NOT NULL";
 //        $result3 = mysqli_query($mysqli, $teamnameCheck);
 //        if ($result3) {
@@ -88,7 +91,8 @@ if(isset($_POST['join_game'])) {
 //              echo '</label>';
 //              echo '<input id="login__teamname" type="text" name="teamname" class="form__input" placeholder="Team name" required>';
 //          echo '</div>';
-//        } ?>
+//        }
+        ?>
         <span id="qqqq">* vergeet niet een team te kiezen</span>
       <div class="form__field">
         <input type="submit" name="join_game" value="Join Game">

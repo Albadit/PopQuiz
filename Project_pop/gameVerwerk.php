@@ -11,12 +11,15 @@ include_once 'config_test.php';
 $gameName = $_POST['gameName'];
 if (strlen($gameName) > 0){
     $date = date("Y-m-d");
-    $gameAdd = "INSERT INTO `Game`(`gameID`, `Game`, `Ronde`, `Goedkeuring` `Vraag` `date`) VALUES (NULL, '$gameName', '1', '0', '0', ''$date')";
+    $gameAdd = "INSERT INTO `Game`(`gameID`, `Game`, `Ronde`, `Goedkeuring`, `Vraag`, `date`) VALUES (NULL, '$gameName', '1', '0', '0', '$date')";
     $result = mysqli_query($mysqli, $gameAdd);
+    var_dump($gameAdd);
     if ($result) {
-        echo "sd";
+//        echo "sd";
     } else {
-        echo "sdf";
+        header("Location: beginscherm_host.php");
+        exit();
+//        echo "1";
     }
     $lastGame = mysqli_query($mysqli, "SELECT `gameID` FROM `Game` WHERE 1 ORDER BY `gameID` DESC");
     $resultGame = mysqli_fetch_array($lastGame);
@@ -30,14 +33,16 @@ if (strlen($gameName) > 0){
     $Speler_result = mysqli_fetch_array($Speler);
     $spelerID1 = $Speler_result['spelerID'] + 1;
     $spelerID2 = $Speler_result['spelerID'] + 2;
-    $spelerAdd = "INSERT INTO `Speler`(`spelerID`) VALUES (NULL)";
-    $spelerAdd2 = "INSERT INTO `Speler`(`spelerID`) VALUES (NULL)";
+    $spelerAdd = "INSERT INTO `Speler`(`spelerID`, `team`) VALUES (NULL, 'red')";
+    $spelerAdd2 = "INSERT INTO `Speler`(`spelerID`, `team`) VALUES (NULL, 'blue')";
     $result = mysqli_query($mysqli, $spelerAdd);
     $result2 = mysqli_query($mysqli, $spelerAdd2);
     if ($result && $result2) {
-        echo "sd";
+//        echo "sd";
     } else {
-        echo "sdf";
+         header("Location: beginscherm_host.php");
+        exit();
+//        echo "2";
     }
 ######################### werkt ^^^^
 ### team tabel
@@ -60,9 +65,11 @@ if (strlen($gameName) > 0){
     $teamAdd = "INSERT INTO `Team` (`teamID`, `teamRed`, `teamBlue`, `sessieCode`) VALUES (NULL, '$spelerID1', '$spelerID2', '$sessieCode')";
     $result = mysqli_query($mysqli, $teamAdd);
     if ($result) {
-        echo "sd";
+//        echo "sd";
     } else {
-        echo "sdf";
+        header("Location: beginscherm_host.php");
+        exit();
+//        echo "3";
     }
     $Team = mysqli_query($mysqli, "SELECT `teamID` FROM `Team` WHERE 1 ORDER BY `teamID` DESC");
     $resultTeam = mysqli_fetch_array($Team);
@@ -74,9 +81,11 @@ $spelerUpdate1 = "UPDATE `Speler` SET `sessieCode`= '$sessieCode' WHERE `spelerI
 $spelerUpdate2 = mysqli_query($mysqli, $spelerUpdate);
 $spelerUpdate2_1 = mysqli_query($mysqli, $spelerUpdate1);
 if ($spelerUpdate2 && $spelerUpdate2_1) {
-    echo "sddd";
+//    echo "sddd";
 } else {
-    echo "sdf";
+    header("Location: beginscherm_host.php");
+    exit();
+//    echo "4";
 }
 ######################### werkt ^^^^
 ### sessie tabel
@@ -84,9 +93,12 @@ if ($spelerUpdate2 && $spelerUpdate2_1) {
     $result = mysqli_query($mysqli, $query);
     //var_dump($result);
     if ($result) {
-        echo "sd";
+        header("Location: teamOverzicht_host.php");
+        //echo "last";
     } else {
-        echo "sdf";
+        header("Location: beginscherm_host.php");
+        exit();
+        //echo "5";
     }
 } else {
     echo "Vul een game naam in";

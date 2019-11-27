@@ -1,6 +1,7 @@
 * {
   margin: 0 auto;
-  text-align: center;
+	text-align: center;
+	font-family: "nimbus-sans", sans-serif;
 }
 
 header {
@@ -15,10 +16,20 @@ figure {
   transform: translateY(-50%);
 }
 
-h1{
+h1 {
   color: #00ff08;
-  font-weight: bold;
-  margin-top: 20px;
+	font-weight: bold;
+	font-size: 50px;
+	margin-top: 20px;
+	-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+h2 {
+	color: #00ff08;
+	font-weight: bold;
+	margin-top: 10px;
+	font-size: 30px;
 }
 
 h3{
@@ -27,7 +38,7 @@ h3{
 }
 
 table {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 30px;
@@ -62,10 +73,12 @@ form {
 	background-color: rgba(0,0,20,0.1);
 	transition: all 0.3s;
 }
+
 .btn-three:hover::before {
 	opacity: 0 ;
   
 }
+
 .btn-three::after {
 	content: '';
 	position: absolute;
@@ -78,6 +91,7 @@ form {
 	border: 1px solid rgba(0,0,0,0.5);
 	transform: scale(1.2,1.2);
 }
+
 .btn-three:hover::after {
 	opacity: 1;
 	transform: scale(1,1);
